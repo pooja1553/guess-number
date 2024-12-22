@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+<body>
+    <script>
+        let r1 = Math.ceil(Math.random()*10);
+        console.log("Random number is :",r1);
+        let num;
+        while(num != r1){
+            num = prompt("Enter number between 1 to 10");
+            num = Number.parseInt(num);
+            if(num == r1){
+                console.log("Congrats, you guess right number");
+                alert("Congrats, you guess right number");
+                console.log("You entered :",num);
+            }
+            else if(num>r1 && num<11){
+                alert("Your number is larger");
+            }
+            else if(num<r1 && num>0){
+                alert("Your number is smaller");
+            }
+            else{
+                alert("Enter number between 1 to 10");
+            }
+        }
+    </script>
+</body>
+</html>
